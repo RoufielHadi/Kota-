@@ -9,15 +9,13 @@ Fitur
 3. Menghapus Kota: Menghapus kota beserta seluruh daftar penduduknya.
 4. Menghapus Penduduk: Menghapus penduduk dari daftar suatu kota.
 
-
 Menampilkan Data:
 1. Menampilkan data semua kota beserta daftar penduduknya.
 2. Menampilkan data penduduk dari kota tertentu.
+3. Statistik data penduduk
 
-Statistik:
+Kontributor
+1. Roufiel Hadi (241524028) - Teknik Informatika, POLBAN
 
-Menghitung jumlah total kota.
-
-Menghitung jumlah penduduk dalam suatu kota.
-
-Menghitung jumlah total penduduk dalam sistem.
+Program ini adalah tugas pertemuan ke-7 mata kuliah Struktur Data dan Algoritma dengan dosen Pak Wendi Wirasta
+Masih banyak kekurangan pada program ini, mulai dari case sensitif pada input, belum ada fitur edit data, belum terintegrasi pada database, dll.
