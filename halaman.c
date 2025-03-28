@@ -152,6 +152,7 @@ void tampilkanData(Array *arr) {
     puts("************************** TAMPILKAN DATA **************************");
     puts("1. Tampilkan Semua Data");
     puts("2. Tampilkan Data Kota Tertentu");
+    puts("3. Statistik Data");
     printf("Pilihan: ");
     int choice;
     scanf("%d", &choice);
@@ -165,9 +166,22 @@ void tampilkanData(Array *arr) {
         fgets(kota, sizeof(kota), stdin);
         kota[strcspn(kota, "\n")] = 0;
         Implementasi_Tampilkan_Kota(arr, kota);
+    } else if (choice == 3) {
+        printf("\nStatistik Data:\n");
+        printf("Jumlah Kota: %d\n", Implementasi_Hitung_Total_Kota(arr));
+
+        int totalPenduduk = 0;
+        for (int i = 0; i < arr->size; i++) {
+            int jumlahPenduduk = Implementasi_Hitung_Penduduk_Kota(arr, arr->data[i].namaKota);
+            totalPenduduk += jumlahPenduduk;
+            printf("Kota: %s - Jumlah Penduduk: %d\n", arr->data[i].namaKota, jumlahPenduduk);
+        }
+
+        printf("Total Penduduk di Semua Kota: %d\n", totalPenduduk);
     } else {
         printf("Pilihan tidak valid!\n");
     }
+    
     printf("Tekan Enter untuk kembali ke menu...");
     getchar();
 }
